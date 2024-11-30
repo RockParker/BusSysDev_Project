@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Setup">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="Transparent" />
+                <Setter Property="TextColor" Value="Black" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="BorderColor" Value="Black" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <VerticalStackLayout Grid.Column="1" Grid.Row="0" Spacing="10">
+            <Label HorizontalOptions="Center">Gender</Label>
+                <Button x:Name="MaleButton" Text="Male" Clicked="Male_Clicked"></Button>
+                <Button x:Name="FemaleButton" Text="Female" Clicked="Female_Clicked"></Button>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Grid.Column="1" Grid.Row="1">
+            <Label HorizontalOptions="Center">Age</Label>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Entry x:Name="AgeEntry" Placeholder="Enter your age"></Entry>
+                <Label VerticalOptions="Center">Years</Label>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Grid.Column="1" Grid.Row="2">
+            <Label HorizontalOptions="Center">Weight</Label>
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Entry x:Name="WeightEntry" Placeholder="Enter your weight"></Entry>
+                <Label VerticalOptions="Center">lbs</Label>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <Button Grid.Column="2" Grid.Row="3" VerticalOptions="End"></Button>
+        
+    </Grid>
+</ContentPage>

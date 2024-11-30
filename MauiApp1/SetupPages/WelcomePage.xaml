@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.WelcomePage">
+    <ContentPage.Resources>
+        <ResourceDictionary Source="Resources/Styles/Colors.xaml"></ResourceDictionary>
+    </ContentPage.Resources>
+    <VerticalStackLayout
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Spacing="20">
+        <Image Source="welcome_image.svg" ></Image>
+        <Label FontSize="18" HorizontalTextAlignment="Center">
+            Welcome to our Fitness App!&#x0a;Congratulations on taking the first step to a healthier you.
+        </Label>
+        
+        <Button Background="{StaticResource Primary}"
+                Text="Setup"
+                HorizontalOptions="Center"
+                Clicked="Setup_Clicked"/>
+        
+    </VerticalStackLayout>
+</ContentPage>

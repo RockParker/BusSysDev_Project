@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            
+            <Label Text="Welcome Back, User!"/>
+            
+            <!-- This grid will be the summary Left column will be the "labels" the right side will be the data -->
+            <Border Padding="15" Background="Gray">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="15" />
+                </Border.StrokeShape>
+                <Grid Background="transparent" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                
+                <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" FontSize="18"
+                       Margin="0,0,0,0">Summary</Label>
+                
+                <Label Grid.Column="0" Grid.Row="1">Food</Label>
+                <Label Grid.Column="0" Grid.Row="2">Exercise</Label>
+                <Label Grid.Column="0" Grid.Row="3">Remaining</Label>
+               
+                <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="End" x:Name="FoodCalories">-/-</Label>
+                <Label Grid.Column="1" Grid.Row="2" HorizontalOptions="End" x:Name="ExerciseCalories">-/-</Label>
+                <Label Grid.Column="1" Grid.Row="3" HorizontalOptions="End" x:Name="RemainingCalories">-/-</Label>
+            </Grid>
+            </Border>
+            
+            <Border>
+                <VerticalStackLayout>
+                    <Label FontSize="18"></Label>
+                </VerticalStackLayout>
+            </Border>
+            </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
