@@ -12,6 +12,12 @@ build_property.ProjectDir = C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/AddFoodPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.AddFoodPage.xaml
+build_metadata.AdditionalFiles.TargetPath = AddFoodPage.xaml
+build_metadata.AdditionalFiles.RelativePath = AddFoodPage.xaml
+
 [C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.App.xaml
@@ -42,11 +48,47 @@ build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.Resources.Styles.
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
 
-[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/Setup.xaml]
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/ActivityPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.Setup.xaml
-build_metadata.AdditionalFiles.TargetPath = SetupPages\Setup.xaml
-build_metadata.AdditionalFiles.RelativePath = SetupPages\Setup.xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.ActivityPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\ActivityPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\ActivityPage.xaml
+
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/AgePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.AgePage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\AgePage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\AgePage.xaml
+
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/DesiredWeight.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.DesiredWeight.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\DesiredWeight.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\DesiredWeight.xaml
+
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/GenderPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.GenderPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\GenderPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\GenderPage.xaml
+
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/GoalPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.GoalPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\GoalPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\GoalPage.xaml
+
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/ProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.ProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\ProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\ProfilePage.xaml
+
+[C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/WeightPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = MauiApp1.SetupPages.WeightPage.xaml
+build_metadata.AdditionalFiles.TargetPath = SetupPages\WeightPage.xaml
+build_metadata.AdditionalFiles.RelativePath = SetupPages\WeightPage.xaml
 
 [C:/Users/rossy/RiderProjects/MauiApp1/MauiApp1/SetupPages/WelcomePage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml

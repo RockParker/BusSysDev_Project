@@ -1,32 +1,17 @@
-﻿namespace MauiApp1;
+﻿using System.Runtime.CompilerServices;
+
+namespace MauiApp1;
 
 public partial class AppShell : Shell
 {
-    private static bool IsFirstLaunch => true;
+    private MainPage MainPage { get; }
+
     public AppShell()
     {
         InitializeComponent();
-        
-        HomeContent.ContentTemplate =  new DataTemplate(()=> new WelcomePage());
-        HomeContent.Route = "WelcomePage";
-    }
+        MainPage = new MainPage();
+        HomeContent.ContentTemplate =  new DataTemplate(()=> MainPage);
+        HomeContent.Route = "MainPage";
 
-    private void OnLaunch()
-    {
-        DataTemplate launchPage;
-        string route;
-        if (IsFirstLaunch)
-        {
-            launchPage = new DataTemplate(()=> new WelcomePage());
-            route = "WelcomePage";
-        }
-        else
-        {
-            launchPage = new DataTemplate(()=> new MainPage());
-            route = "MainPage";
-        }
-
-        HomeContent.ContentTemplate =  launchPage;
-        HomeContent.Route = route;
     }
 }

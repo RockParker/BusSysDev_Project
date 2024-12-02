@@ -4,21 +4,52 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.WelcomePage">
     <ContentPage.Resources>
-        <ResourceDictionary Source="Resources/Styles/Colors.xaml"></ResourceDictionary>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource Gray600}" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="25" />
+            </Style>
+        </ResourceDictionary>
     </ContentPage.Resources>
-    <VerticalStackLayout
-        HorizontalOptions="Center"
-        VerticalOptions="Center"
-        Spacing="20">
-        <Image Source="welcome_image.svg" ></Image>
-        <Label FontSize="18" HorizontalTextAlignment="Center">
-            Welcome to our Fitness App!&#x0a;Congratulations on taking the first step to a healthier you.
-        </Label>
+
+    <Grid Background="{StaticResource OffBlack}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         
-        <Button Background="{StaticResource Primary}"
-                Text="Setup"
-                HorizontalOptions="Center"
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+                     HorizontalOptions="Center"
+                     VerticalOptions="Center"
+                     Spacing="20" >
+        
+            <Image Source="welcome_image.svg" ></Image>
+            <Label FontSize="18" HorizontalTextAlignment="Center">
+            Welcome to our Fitness App!&#x0a;Congratulations on taking the first step to a healthier you.
+            </Label>
+        </VerticalStackLayout>
+        
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                Background="{StaticResource Primary}"
+                VerticalOptions="Center"
+                Text=" > "
+                Margin="40"
                 Clicked="Setup_Clicked"/>
         
-    </VerticalStackLayout>
+    </Grid>
 </ContentPage>

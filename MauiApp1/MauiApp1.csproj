@@ -21,7 +21,7 @@
         <Nullable>enable</Nullable>
 
         <!-- Display name -->
-        <ApplicationTitle>MauiApp1</ApplicationTitle>
+        <ApplicationTitle>Bus. Sys. Dev App</ApplicationTitle>
 
         <!-- App Identifier -->
         <ApplicationId>com.companyname.mauiapp1</ApplicationId>
@@ -36,6 +36,7 @@
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</SupportedOSPlatformVersion>
         <TargetPlatformMinVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'windows'">10.0.17763.0</TargetPlatformMinVersion>
         <SupportedOSPlatformVersion Condition="$([MSBuild]::GetTargetPlatformIdentifier('$(TargetFramework)')) == 'tizen'">6.5</SupportedOSPlatformVersion>
+        <PackageId>Test</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
@@ -57,29 +58,29 @@
     </ItemGroup>
 
     <ItemGroup>
+        <PackageReference Include="CommunityToolkit.Maui" Version="9.1.1" />
         <PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)"/>
         <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.1"/>
     </ItemGroup>
 
     <ItemGroup>
-      <MauiXaml Update="SetupPages\Setup.xaml">
-        <SubType>Designer</SubType>
-      </MauiXaml>
       <MauiXaml Update="SetupPages\WelcomePage.xaml">
         <SubType>Designer</SubType>
       </MauiXaml>
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="SetupPages\Setup.xaml.cs">
-        <DependentUpon>Setup.xaml</DependentUpon>
-        <SubType>Code</SubType>
-      </Compile>
       <Compile Update="SetupPages\WelcomePage.xaml.cs">
         <DependentUpon>WelcomePage.xaml</DependentUpon>
         <SubType>Code</SubType>
       </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Reference Include="Mono.Android">
+        <HintPath>..\..\..\..\..\Program Files\dotnet\packs\Microsoft.Android.Ref.34\34.0.145\ref\net8.0\Mono.Android.dll</HintPath>
+      </Reference>
     </ItemGroup>
 
 </Project>

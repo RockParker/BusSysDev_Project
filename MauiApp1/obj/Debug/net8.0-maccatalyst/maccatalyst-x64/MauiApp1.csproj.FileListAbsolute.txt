@@ -1,6 +1,8 @@
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.runtimeconfig.json
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.dll
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.pdb
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.dll
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\CommunityToolkit.Maui.Core.dll
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.dll
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.Configuration.Abstractions.dll
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Microsoft.Extensions.DependencyInjection.dll
@@ -254,10 +256,18 @@ C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\macc
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet-nativeaot.a
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.a
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\libxamarin-dotnet.dylib
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Mono.Android.dll
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Java.Interop.dll
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Mono.Android.Runtime.dll
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Mono.Android.xml
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\bin\Debug\net8.0-maccatalyst\maccatalyst-x64\Java.Interop.xml
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauiimage.inputs
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauifont.inputs
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.inputs
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\mauisplash.stamp
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\welcome_image@3x.png
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\welcome_image@2x.png
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\welcome_image.png
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@3x.png
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot@2x.png
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\dotnet_bot.png
@@ -292,6 +302,7 @@ C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\macc
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.AssemblyInfoInputs.cache
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.AssemblyInfo.cs
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.csproj.CoreCompileInputs.cache
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.sourcelink.json
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\XamlC.stamp
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.csproj.Up2Date
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.dll
@@ -299,6 +310,6 @@ C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\macc
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.pdb
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\MauiApp1.genruntimeconfig.cache
 C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\ref\MauiApp1.dll
-C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\welcome_image@3x.png
-C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\welcome_image@2x.png
-C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\welcome_image.png
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\plus_circle@3x.png
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\plus_circle@2x.png
+C:\Users\rossy\RiderProjects\MauiApp1\MauiApp1\obj\Debug\net8.0-maccatalyst\maccatalyst-x64\resizetizer\r\plus_circle.png

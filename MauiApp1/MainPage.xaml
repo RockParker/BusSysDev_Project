@@ -3,49 +3,96 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.MainPage">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>            
+            <Style x:Key="Header" TargetType="Label">
+                <Setter Property="FontSize" Value="25"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>
+            
+            <RoundRectangle x:Key="DefaultRoundRectangle" CornerRadius="15" />
+            <Style TargetType="Border">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="StrokeThickness" Value="1"/>
+                <Setter Property="Stroke" Value="{StaticResource Gray900Brush}" />
+                <Setter Property="StrokeShape" Value="{StaticResource DefaultRoundRectangle}"/>
+                <Setter Property="Padding" Value="15" />
+            </Style>
+            
+            <Style TargetType="ScrollView">
+                <Setter Property="Background" Value="{StaticResource OffBlack}"/>
+            </Style>
+           
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <!-- Here be the content of the page -->
+    
     <ScrollView>
-        <VerticalStackLayout
-            Padding="30,0"
-            Spacing="25">
+        <FlexLayout
+            Direction="Column"
+            VerticalOptions="Fill"
+            Margin="35"
+            >
             
-            <Label Text="Welcome Back, User!"/>
+            <Label x:Name="WelcomeLabel" Style="{StaticResource Header}"/>
             
-            <!-- This grid will be the summary Left column will be the "labels" the right side will be the data -->
-            <Border Padding="15" Background="Gray">
-                <Border.StrokeShape>
-                    <RoundRectangle CornerRadius="15" />
-                </Border.StrokeShape>
-                <Grid Background="transparent" >
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="3*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                
-                <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" FontSize="18"
-                       Margin="0,0,0,0">Summary</Label>
-                
-                <Label Grid.Column="0" Grid.Row="1">Food</Label>
-                <Label Grid.Column="0" Grid.Row="2">Exercise</Label>
-                <Label Grid.Column="0" Grid.Row="3">Remaining</Label>
-               
-                <Label Grid.Column="1" Grid.Row="1" HorizontalOptions="End" x:Name="FoodCalories">-/-</Label>
-                <Label Grid.Column="1" Grid.Row="2" HorizontalOptions="End" x:Name="ExerciseCalories">-/-</Label>
-                <Label Grid.Column="1" Grid.Row="3" HorizontalOptions="End" x:Name="RemainingCalories">-/-</Label>
-            </Grid>
-            </Border>
-            
-            <Border>
+            <Border Background="{StaticResource Gray900Brush}"
+                    Margin="0,0,0,10">
                 <VerticalStackLayout>
-                    <Label FontSize="18"></Label>
+                    
+                    <Label Style="{StaticResource Header}">Summary</Label>
+                    
+                    <FlexLayout >
+                        <Label FlexLayout.Grow="1" >Consumed</Label>
+                        <Label x:Name="FoodCalories" >0/--</Label>
+                    </FlexLayout> 
+                    
+                    <FlexLayout >
+                        <Label FlexLayout.Grow="1" >Exercise</Label>
+                        <Label x:Name="ExerciseCalories" >0</Label>
+                    </FlexLayout>  
+                    
+                    <FlexLayout >
+                        <Label FlexLayout.Grow="1" >Remaining</Label>
+                        <Label x:Name="RemainingCalories" >--/--</Label>
+                    </FlexLayout>
+                
                 </VerticalStackLayout>
             </Border>
-            </VerticalStackLayout>
+            
+            
+            <Border Background="{StaticResource Gray900Brush}">
+                <VerticalStackLayout>
+                    <Label Style="{StaticResource Header}">Food Entries</Label>
+                    <Label FontSize="18" 
+                           TextColor="Gray"
+                           x:Name="EmptyFood" >Nothing to show!</Label>
+                    
+                    <CollectionView ItemsSource="{Binding FoodItems }">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Label Text="{Binding Name}" />
+                                    <Label Text="{Binding CalorieCount}" />
+                                </StackLayout>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                    
+                    <Button Text="+"
+                            TextColor="Black"
+                            FontSize="20"
+                            Padding="0"
+                            Clicked="AddFood_Clicked"/>
+                </VerticalStackLayout>
+            </Border>
+            
+            </FlexLayout>
     </ScrollView>
 
 </ContentPage>

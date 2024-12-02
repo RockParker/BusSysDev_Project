@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.SetupPages.AgePage">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="Label">
+                <Setter Property="TextColor" Value="White"/>
+                <Setter Property="FontSize" Value="25" />
+
+            </Style>
+            <Style TargetType="Button">
+                <Setter Property="Background" Value="{StaticResource Gray600}" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="BorderColor" Value="Transparent" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="25" />
+
+            </Style>
+            <Style TargetType="Entry">
+                <Setter Property="Background" Value="Transparent"/>
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="PlaceholderColor" Value="Gray" />
+                <Setter Property="HorizontalTextAlignment" Value="Center" />
+                <Setter Property="FontSize" Value="25" />
+
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <Grid Background="{StaticResource OffBlack}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        
+        <VerticalStackLayout Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2">
+            <Label FontSize="25" HorizontalOptions="Center">How Old Are You?</Label>
+            <Label HorizontalTextAlignment="Center"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   
+                   >A person's age changes how many calories they need in a day</Label>
+        </VerticalStackLayout>
+        
+        <VerticalStackLayout Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2">
+            <Label HorizontalOptions="Center">Age</Label>
+            <Entry x:Name="AgeEntry" 
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
+                   Placeholder="Years"
+                   Keyboard="Telephone"
+                    />
+        </VerticalStackLayout>
+
+        
+        <Button Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+                Margin="10"
+                Background="{StaticResource Primary}"
+                VerticalOptions="Center"
+                Text=" > "
+                Clicked="Next_Clicked"/>
+    </Grid>
+</ContentPage>
