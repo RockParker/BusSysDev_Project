@@ -8,7 +8,12 @@
             <Style TargetType="Label">
                 <Setter Property="FontSize" Value="20"/>
                 <Setter Property="TextColor" Value="White"/>
-            </Style>            
+            </Style>             
+            <Style x:Key="SmallLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="14"/>
+                <Setter Property="TextColor" Value="White"/>
+            </Style>          
+            
             <Style x:Key="Header" TargetType="Label">
                 <Setter Property="FontSize" Value="25"/>
                 <Setter Property="TextColor" Value="White"/>
@@ -41,7 +46,7 @@
             
             <Label x:Name="WelcomeLabel" Style="{StaticResource Header}"/>
             
-            <Border Background="{StaticResource Gray900Brush}"
+            <Border Background="{StaticResource Gray600Brush}"
                     Margin="0,0,0,10">
                 <VerticalStackLayout>
                     
@@ -66,20 +71,33 @@
             </Border>
             
             
-            <Border Background="{StaticResource Gray900Brush}">
-                <VerticalStackLayout>
+            <Border Background="{StaticResource Gray600Brush}">
+                <VerticalStackLayout
+                    Spacing="15">
                     <Label Style="{StaticResource Header}">Food Entries</Label>
                     <Label FontSize="18" 
                            TextColor="Gray"
                            x:Name="EmptyFood" >Nothing to show!</Label>
                     
-                    <CollectionView ItemsSource="{Binding FoodItems }">
+                    <CollectionView 
+                        x:Name="FoodList" 
+                        ItemsSource="{Binding DailyItems }"
+                        ChildAdded="FoodList_OnChildAdded" >
+                        
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
-                                <StackLayout>
-                                    <Label Text="{Binding Name}" />
-                                    <Label Text="{Binding CalorieCount}" />
-                                </StackLayout>
+                                <FlexLayout HorizontalOptions="Fill"
+                                            Direction="Row"
+                                            JustifyContent="SpaceBetween" >
+                                    
+                                    <Label Style="{StaticResource SmallLabel}" 
+                                           Text="{Binding Name}" 
+                                           x:Name="Name" />
+                                    
+                                    <Label Style="{StaticResource SmallLabel}"
+                                        Text="{Binding CalorieCount}" 
+                                        x:Name="Calories" />
+                                </FlexLayout>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
                     </CollectionView>
@@ -89,10 +107,10 @@
                             FontSize="20"
                             Padding="0"
                             Clicked="AddFood_Clicked"/>
+                    
                 </VerticalStackLayout>
             </Border>
-            
-            </FlexLayout>
+        </FlexLayout>
     </ScrollView>
 
 </ContentPage>

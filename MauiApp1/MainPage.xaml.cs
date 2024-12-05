@@ -3,43 +3,49 @@ namespace MauiApp1;
 
 public partial class MainPage : ContentPage
 {
-    private UserDetails _details;
-    private DailyData _dailyData;
+    private UserDetails _userDetails;
     private AddFoodPage _addFoodPage;
-
-    private DailyFoodViewModel _dailyModel;
+    private FoodViewModel _foodViewModel;
+    private int _exerciseCalories = 0;
+    
     public MainPage()
     {
         InitializeComponent();
-        _details = UserDetails.Instance;
-        _dailyData = DailyData.Instance;
-        _dailyModel = new DailyFoodViewModel();
-        BindingContext = _dailyModel;
-        _addFoodPage = new AddFoodPage(_dailyModel);
+        
+        _userDetails = UserDetails.Instance;
+        _foodViewModel = new FoodViewModel();
+        _addFoodPage = new AddFoodPage(ref _foodViewModel);
+        BindingContext = _foodViewModel;
     }
 
     protected override void OnAppearing()
     {
-        if (_details.IsMale == null)
+        if (_userDetails.IsMale == null)
             Navigation.PushAsync(new WelcomePage());
 
         else
             UpdateLabels();
-        
         base.OnAppearing();
     }
 
     private void UpdateLabels()
     {
-        WelcomeLabel.Text = $"Welcome back, {_details.FirstName}!";
+        WelcomeLabel.Text = $"Welcome back, {_userDetails.FirstName}!";
+       
+        FoodCalories.Text = _foodViewModel.ConsumedCalories.ToString();
         
-        FoodCalories.Text = _dailyData.ConsumedCalories.ToString();
-        ExerciseCalories.Text = _dailyData.ExerciseCalories.ToString();
-        RemainingCalories.Text = _dailyData.RemainingCalories.ToString();
+        ExerciseCalories.Text = _exerciseCalories.ToString();
+        RemainingCalories.Text = _userDetails.DailyCalories - _foodViewModel.ConsumedCalories + _exerciseCalories + " kcal";
     }
     
     private void AddFood_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(_addFoodPage);
+    }
+
+    private void FoodList_OnChildAdded(object? sender, ElementEventArgs e)
+    {
+        if(EmptyFood.IsVisible)
+            EmptyFood.IsVisible = false;
     }
 }

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.AddFoodPage">
+    
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White" />
+            <Setter Property="Margin" Value="4" />
+        </Style>
+    </ContentPage.Resources>
+    
+    <ScrollView
+        Background="{StaticResource OffBlack}">
+        <VerticalStackLayout>
+            <FlexLayout JustifyContent="SpaceBetween"
+                        HorizontalOptions="Fill">
+                <Label>Name</Label>
+                <Label>Calories</Label>
+                <Label></Label>
+            </FlexLayout>
+            <CollectionView ItemsSource="{Binding FoodItems }">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <FlexLayout Margin="10"
+                                    HeightRequest="60"
+                                    AlignItems="Center"
+                                    JustifyContent="SpaceBetween"
+                                    Background="{StaticResource Gray900}">
+                            
+                            <Label x:Name="Name"
+                                   WidthRequest="150"
+                                   Text="{Binding Name}" />
+                            
+                            <Label x:Name="Calories" Text="{Binding CalorieCount}" />
+                            
+                            <Button Text="+" Clicked="Button_OnClicked" Margin="5" CornerRadius="25" />
+                        </FlexLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
